@@ -5,12 +5,14 @@ require_relative 'pyramid'
 class PyramidTest < Minitest::Test
 
   def test_it_returns_number_of_sodas_in_a_given_level
-    pyramid = Pyramid.new(@level)
+    pyramid = Pyramid.new(2)
     assert_equal 4, pyramid.find_level_quantity(2)
     assert_equal 9, pyramid.find_level_quantity(3)
   end
 
 end
+
+
 
 
 

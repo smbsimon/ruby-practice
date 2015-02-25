@@ -1,4 +1,5 @@
 class Pyramid
+  attr_reader :level
 
   def initialize(level)
     @level = level
@@ -7,7 +8,6 @@ class Pyramid
   def find_level_quantity(level)
     level ** 2
   end
-
 end
 
 
