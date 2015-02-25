@@ -1,0 +1,3 @@
+class Soda
+
+end
