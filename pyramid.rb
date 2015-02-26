@@ -5,7 +5,7 @@ class Pyramid
     @level = level
   end
 
-  def find_level_quantity(level)
+  def find_quantity_for_level(level)
     level ** 2
   end
 end
