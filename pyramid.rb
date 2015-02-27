@@ -1,7 +1,5 @@
 class Pyramid
-  attr_reader :bonus,
-              :price
-
+  attr_reader   :bonus, :price
   attr_accessor :level
 
   def initialize(bonus, price)
