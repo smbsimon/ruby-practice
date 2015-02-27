@@ -3,9 +3,9 @@ class Pyramid
   attr_accessor :level
 
   def initialize(bonus, price)
-    @level   = 0
-    @bonus   = bonus
-    @price   = price
+    @level = 0
+    @bonus = bonus
+    @price = price
   end
 
   def total_sodas_per_level
