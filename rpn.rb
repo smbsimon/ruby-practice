@@ -13,8 +13,10 @@ class RPNCalculator
       new_element = a + b
     elsif split_characters[2] == "-"
       new_element = a - b
-    else split_characters[2] == "*"
+    elsif split_characters[2] == "*"
       new_element = a * b
+    else
+      puts "error"
     end
 
     new_element

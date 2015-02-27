@@ -19,9 +19,9 @@ class RPNCalculatorTest < Minitest::Test
     assert_equal 30, calc.evaluate('50 20 -')
   end
 
-  # def test_it_can_evaluate_this_beast
-  #   calc = RPNCalculator.new
-  #   assert_equal 0, calc.evaluate('70 10 4 + 5 * -')
-  # end
+  def test_it_can_evaluate_this_beast
+    calc = RPNCalculator.new
+    assert_equal 0, calc.evaluate('70 10 4 + 5 * -')
+  end
 
 end
