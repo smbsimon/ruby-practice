@@ -1,5 +1,3 @@
-require 'pry'
-
 class RPNCalculator
 
   def evaluate(rpn)
@@ -10,16 +8,16 @@ class RPNCalculator
 
 
     if split_characters[2] == "+"
-      new_element = a + b
+      result = a + b
     elsif split_characters[2] == "-"
-      new_element = a - b
+      result = a - b
     elsif split_characters[2] == "*"
-      new_element = a * b
+      result = a * b
     else
       puts "error"
     end
 
-    new_element
+    result
 
   end
 end
