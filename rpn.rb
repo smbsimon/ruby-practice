@@ -1,32 +1,19 @@
-require 'pry'
-
 class RPNCalculator
 
   def evaluate(rpn)
     stack = []
     split_elements = rpn.split(" ")
 
-    split_elements.map do |element|
+    split_elements.each_with_index do |element, index|
       if element =~ /\d+/
         stack << element.to_i
       else
         last_two_elements = stack.pop(2)
-
-        a = last_two_elements[0]
-        b = last_two_elements[1]
-
-        if element == "+"
-          result = a + b
-        elsif element == "-"
-          result = a - b
-        elsif element == "*"
-          result = a * b
-        else
-          puts "error"
-        end
-
+        result = last_two_elements.inject(element)
         stack << result
-        binding.pry
+      end
+
+      if index == (split_elements.length - 1)
         return result
       end
     end
