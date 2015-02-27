@@ -1,17 +1,29 @@
 class Pyramid
-  attr_reader :level
+  attr_reader :level,
+              :bonus,
+              :price
 
-  def initialize(level)
-    @level = level
+  def initialize
+    @level   = level
+    @bonus   = 50
+    @price   = 2
   end
 
-  def find_quantity_for_level(level)
-    level ** 2
+  def total_number_of_possible_sodas
+    bonus / price
   end
+
+  def total_sodas_per_level(level)
+    (1..level).map { |i| i*i }
+  end
+
+  def total_sodas_in_pyramid(level)
+    total_sodas_per_level(level).reduce(:+)
+  end
+
+
+
 end
-
-
-
 
 
 
@@ -23,9 +35,18 @@ end
 
 
 
-# A soda can pyramid will square the number of cans in each level - 1 can in the top level,
-# 4 in the second, 9 in the next, 16, 25...
-#
+# level 1 = 1     for total of 1 sodas
+# level 2 = 4     for total of 5 sodas
+# level 3 = 9     for total of 14 sodas
+# level 4 = 16    for total of 30 sodas
+# level 5 = 25    for total of 55 sodas
+
+
+# level squared + (level - 1) squared
+
+
+
+
 # Complete the sodamid function to return the number of complete levels of a
 # soda can pyramid you can make, given the parameters of:
 #
