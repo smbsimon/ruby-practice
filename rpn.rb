@@ -1,23 +1,34 @@
+require 'pry'
+
 class RPNCalculator
 
   def evaluate(rpn)
-    split_characters = rpn.split(" ")
+    stack = []
+    split_elements = rpn.split(" ")
 
-    a = split_characters[0].to_i
-    b = split_characters[1].to_i
+    split_elements.map do |element|
+      if element =~ /\d+/
+        stack << element.to_i
+      else
+        last_two_elements = stack.pop(2)
 
+        a = last_two_elements[0]
+        b = last_two_elements[1]
 
-    if split_characters[2] == "+"
-      result = a + b
-    elsif split_characters[2] == "-"
-      result = a - b
-    elsif split_characters[2] == "*"
-      result = a * b
-    else
-      puts "error"
+        if element == "+"
+          result = a + b
+        elsif element == "-"
+          result = a - b
+        elsif element == "*"
+          result = a * b
+        else
+          puts "error"
+        end
+
+        stack << result
+        binding.pry
+        return result
+      end
     end
-
-    result
-
   end
 end
