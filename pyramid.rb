@@ -9,10 +9,6 @@ class Pyramid
     @price   = 2
   end
 
-  def total_number_of_possible_sodas
-    bonus / price
-  end
-
   def total_sodas_per_level(level)
     (1..level).map { |i| i*i }
   end
@@ -21,9 +17,26 @@ class Pyramid
     total_sodas_per_level(level).reduce(:+)
   end
 
+  def total_available_sodas(bonus, price)
+    bonus / price
+  end
 
-
+  def total_levels_for_a_given_bonus(bonus, price)
+    
+  end
 end
+
+
+
+
+#
+# 50 / 2 = 25 sodas.
+# 25 sodas are on level 5
+# but what i want is to find the level at which count does not exceed 25 sodas... which is level 3
+# i want to find the level at which i don't exceed total_available_sodas
+
+
+
 
 
 
@@ -40,10 +53,6 @@ end
 # level 3 = 9     for total of 14 sodas
 # level 4 = 16    for total of 30 sodas
 # level 5 = 25    for total of 55 sodas
-
-
-# level squared + (level - 1) squared
-
 
 
 

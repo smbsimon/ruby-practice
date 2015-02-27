@@ -4,16 +4,37 @@ require_relative 'pyramid'
 
 class PyramidTest < Minitest::Test
 
-  def test_it_returns_number_of_sodas_for_given_number_of_levels
+  def test_it_returns_array_of_sodas_per_level
+    pyramid = Pyramid.new
+    assert_equal [1, 4, 9], pyramid.total_sodas_per_level(3)
+  end
+
+  def test_it_returns_total_number_of_sodas_for_given_number_of_levels
     pyramid = Pyramid.new
     assert_equal 30, pyramid.total_sodas_in_pyramid(4)
     assert_equal 55, pyramid.total_sodas_in_pyramid(5)
   end
 
+  def test_it_returns_total_available_sodas_given_bonus_and_price
+    pyramid = Pyramid.new
+    assert_equal 25, pyramid.total_available_sodas(50, 2)
+  end
 
-
+  def test_it_returns_number_of_levels_for_a_given_bonus
+    pyramid = Pyramid.new
+    assert_equal 3, pyramid.total_levels_for_a_given_bonus(50, 2)
+  end
 
 end
+
+
+
+
+# 50 / 2 = 25 sodas.
+# 25 sodas are on level 5
+# but what i want is to find the level that does not exceed 25 sodas... which is level 3
+
+
 
 
 
