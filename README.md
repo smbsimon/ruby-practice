@@ -1,20 +1,20 @@
-Just a little place to keep these Ruby chops chopping.
+# Just a little place to keep these Ruby chops chopping.
 
 
-# Gigasecond
+### Gigasecond
 
 Write a program that will calculate the date that someone turned or will celebrate their 1 Gs anniversary.
 A gigasecond is one billion (10**9) seconds.
 
 
-# Printer
+### Printer
 
 Imagine we're writing some code for a printer and we need to tell the printer how to print the pages for a book by giving it an array with pairs of page numbers to be printed. The book is bound in the middle so the first page is printed on the same sheet of paper as the last page, then the second page is printed on the same sheet of paper as the second to last page and so forth. Write a function that takes in an integer argument n and then returns an array of pairs of integers representing the page numbers to be printed. For simplicity we can assume that n is a multiple of 2.
 
 n = 4 [[1, 4], [2, 3]]
 
 
-# Pyramid
+### Pyramid
 
 Pretend your company just hired your friend from college and paid you a referral bonus. To celebrate, you're taking your team next door and using the referral bonus to buy and build the largest three-dimensional soda can pyramid you can.
 
@@ -26,7 +26,7 @@ Complete the function to return the number of complete levels of a soda can pyra
 2) the price of a soda can
 
 
-# RPN Calculator
+### RPN Calculator
 
 Create an RPNCalculator class which can evaliate expressions written in Reverse Polish Notation
 
